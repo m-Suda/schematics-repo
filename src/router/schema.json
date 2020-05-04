@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "SchematicsRouterClass",
+  "title": "",
+  "type": "object",
+  "description": "",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": ""
+    },
+    "path": {
+      "type": "string",
+      "description": ""
+    }
+  }
+}

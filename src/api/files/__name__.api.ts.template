@@ -1,0 +1,44 @@
+export class <%= classify(name) %> {
+    constructor(private _request: ISignedRequestClient) {}
+
+    public async get() {
+
+        try {
+
+        } catch(e) {
+            console.error(e);
+            throw new Error('<%= name %>の取得に失敗しました');
+        }
+    }
+
+    public async post() {
+
+        try {
+
+        } catch(e) {
+            console.error(e);
+            throw new Error('<%= name %>の作成に失敗しました');
+        }
+    }
+
+    public async patch() {
+
+        try {
+
+        } catch(e) {
+            console.error(e);
+            throw new Error('<%= name %>の更新に失敗しました');
+        }
+    }
+
+    public async delete() {
+
+        try {
+
+        } catch(e) {
+            console.error(e);
+            throw new Error('<%= name %>の削除に失敗しました');
+        }
+    }
+
+}

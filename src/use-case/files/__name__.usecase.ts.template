@@ -1,0 +1,12 @@
+export async function <%= name %>() {
+    console.log(`<%= name %> start`);
+
+    try {
+
+    } catch (error) {
+        console.error('システムエラー');
+        console.error(error);
+    } finally {
+        console.log(`<%= name %> end`);
+    }
+}
