@@ -1,0 +1,15 @@
+export const latestVersion = {
+    TypeScript: '~3.8.3',
+    TypesJest: '~25.2.1',
+    TypesNode: '~13.13.4',
+    TsEslintPlugin: '~2.31.0',
+    TsEsParser: '~2.31.0',
+    Eslint: '~6.8.0',
+    EslintConfigAirbnbBase: '~14.1.0',
+    EslintConfigPrettier: '~6.11.0',
+    EslintPluginImport: '~2.20.2',
+    EslintPluginPrettier: '~3.1.3',
+    Jest: '~26.0.1',
+    Prettier: '~2.0.5',
+    TsJest: '~25.4.0',
+};

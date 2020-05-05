@@ -1,17 +1,23 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "SchematicsApiClass",
+  "id": "SchematicsTsNewClass",
   "title": "",
   "type": "object",
   "description": "",
   "properties": {
     "name": {
       "type": "string",
-      "description": ""
+      "description": "",
+      "x-prompt": "Enter Project name"
     },
-    "path": {
+    "directory": {
       "type": "string",
       "description": ""
+    },
+    "packageManager": {
+      "type": "string",
+      "description": "",
+      "enum": ["npm", "yarn"]
     }
   }
 }
