@@ -1,20 +1,10 @@
 {
   "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
-    "use-case": {
-      "description": "Create use-case file",
-      "factory": "./use-case",
-      "schema": "./use-case/schema.json"
-    },
-    "api": {
-      "description": "Create api-class file",
-      "factory": "./api",
-      "schema": "./api/schema.json"
-    },
-    "router": {
-      "description": "Create router file",
-      "factory": "./router",
-      "schema": "./router/schema.json"
+    "ts-new-clarc": {
+      "description": "Create Clean Architecture TS project",
+      "factory": "./ts-new-clarc",
+      "schema": "./ts-new-clarc/schema.json"
     }
   }
 }

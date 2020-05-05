@@ -1,9 +1,0 @@
-export class <%= classify(name) %>Router {
-    public async facade(event: APIGatewayProxyEvent) {
-        const {resource} = event;
-        switch(resource) {
-            default:
-                return 'Error';
-        }
-    }
-}
