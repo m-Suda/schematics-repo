@@ -1,5 +1,5 @@
 {
-  "name": "my-schematics",
+  "name": "masaks",
   "version": "0.0.0",
   "description": "A blank schematics",
   "scripts": {
@@ -9,13 +9,22 @@
   "keywords": [
     "schematics"
   ],
-  "author": "",
+  "bin": {
+    "masaks": "bin/masaks-cli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-Suda/schematics-repo.git"
+  },
+  "private": true,
+  "author": "masaks",
   "license": "MIT",
   "schematics": "./src/collection.json",
   "dependencies": {
     "@angular-devkit/core": "^9.1.4",
     "@angular-devkit/schematics": "^9.1.4",
-    "@angular-devkit/schematics-cli": "^0.901.4"
+    "@angular-devkit/schematics-cli": "^0.901.4",
+    "commander": "^5.1.0"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
