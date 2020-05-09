@@ -1,28 +1,23 @@
-# Getting Started With Schematics
+# Scaffolding Tools
 
-This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
+## 概要
+@angular-devkit/schematicsを利用したファイル自動生成ツールになります。
 
-### Testing
+## 導入
+### 1. 導入したいプロジェクトに必要なnpm packageをインストールする。
+必要なpackageは以下。なお、既に入っているものは改めてインストールする必要は無い。<br>
+**DevDependencies**に追加すること。
+- @angular-devkit/core
+- @angular-devkit/schematics
+- @angular-devkit/schematics-cli
+- commander
+- typescript
 
-To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
+### 2. プロジェクトのルートに任意のディレクトリを作成する。
+この自動ファイル生成ツールのソースコードを格納するために必要。<br>
+作成したら`.gitignore`に作成したディレクトリを追加しておくこと。
 
-Check the documentation with
-```bash
-schematics --help
-```
+### 3. 作成したディレクトリの中にこのリポジトリをクローンする。
+説明不要
 
-### Unit Testing
-
-`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
-
-### Publishing
-
-To publish, simply do:
-
-```bash
-npm run build
-npm publish
-```
-
-That's it!
- 
+### 4. プロジェクトのpackage.jsonの`scripts`項目に以下のコマンドを追加する。
