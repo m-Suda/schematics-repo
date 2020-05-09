@@ -6,10 +6,10 @@
 - Schematicsを追加したい
 
 ## このツールについて
-@angular-devkit/schematicsを利用したファイル自動生成ツールになります。
+@angular-devkit/schematicsを利用したファイル自動生成ツール。
 
 ## 導入
-### 1. 導入したいプロジェクトに必要なnpm packageをインストールする。
+### 1. 導入したいプロジェクトに、ツールで必要なnpm packageをインストールする。
 必要なpackageは以下。なお、既に入っているものは改めてインストールする必要は無い。<br>
 **DevDependencies**に追加すること。
 - @angular-devkit/core
@@ -30,7 +30,7 @@
 ### 4. プロジェクトの`package.json`に`schematics`項目を追加する。
 ```json
 {
-  "schematics": "./<1で作成したディレクトリ>/schematics-repo/src/collection.json"
+  "schematics": "./<2で作成したディレクトリ>/schematics-repo/src/collection.json"
 }
 ```
 
@@ -38,8 +38,8 @@
 ```json
 {
     "scripts": {
-      "schematics:build": "npx tsc -p <1で作成したディレクトリ>/schematics-repo",
-      "schematics:generate": "node <1で作成したディレクトリ>/schematics-repo/bin/schematics-cli.js"
+      "schematics:build": "npx tsc -p <2で作成したディレクトリ>/schematics-repo",
+      "schematics:generate": "node <2で作成したディレクトリ>/schematics-repo/bin/schematics-cli.js"
     }
 }
 ```
