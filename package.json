@@ -9,9 +9,6 @@
   "keywords": [
     "schematics"
   ],
-  "bin": {
-    "masaks": "bin/masaks-cli.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/m-Suda/schematics-repo.git"
