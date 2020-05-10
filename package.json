@@ -1,5 +1,5 @@
 {
-  "name": "masaks",
+  "name": "schematics",
   "version": "1.0.0",
   "description": "A blank schematics",
   "scripts": {
@@ -12,6 +12,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/m-Suda/schematics-repo.git"
+  },
+  "bin": {
+    "schematics": "bin/schematics-cli.js"
   },
   "private": true,
   "author": "masaks",
