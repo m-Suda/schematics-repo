@@ -20,8 +20,7 @@
   "dependencies": {
     "@angular-devkit/core": "^9.1.4",
     "@angular-devkit/schematics": "^9.1.4",
-    "@angular-devkit/schematics-cli": "^0.901.4",
-    "commander": "^5.1.0"
+    "@angular-devkit/schematics-cli": "^0.901.4"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
