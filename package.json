@@ -1,5 +1,5 @@
 {
-  "name": "as",
+  "name": "schematics-repo",
   "version": "1.0.0",
   "description": "as is Automate scaffolding with Schematics",
   "scripts": {
@@ -12,9 +12,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/m-Suda/schematics-repo.git"
-  },
-  "bin": {
-    "schematics": "bin/schematics-cli.js"
   },
   "private": true,
   "author": "masaks",
