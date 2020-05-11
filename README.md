@@ -9,44 +9,64 @@
 @angular-devkit/schematicsを利用したファイル自動生成ツール。
 
 ## 導入
-### 1. 導入したいプロジェクトに、ツールで必要なnpm packageをインストールする。
-必要なpackageは以下。なお、既に入っているものは改めてインストールする必要は無い。<br>
-**DevDependencies**に追加すること。
-- @angular-devkit/core
-- @angular-devkit/schematics
-- @angular-devkit/schematics-cli
-- commander
-- typescript
-- @types/node ※これが無いとBuildで失敗する
-- @types/jest ※これが無いとBuildで失敗する
+### 1. このリポジトリをクローンする。
+導入したいプロジェクト以外のディレクトリが望ましい。<br>
+クローン後、
+```shell script
+$ npm install
+```
+または
+```shell script
+$ npm ci
+```
+を実行して必要なpackageをインストールする。
 
-### 2. プロジェクトのルートに任意のディレクトリを作成する。
-この自動ファイル生成ツールのソースコードを格納するために必要。<br>
-作成したら`.gitignore`に作成したディレクトリを追加しておくこと。
+### 2. npm modulesとして固める。
+ソースコードのビルドをする。
+```shell script
+$ npm run build
+```
+その後npm moduleとして固める。
+```shell script
+$ npm pack
+```
+するとこのリポジトリにtgzファイルが作成される。
 
-### 3. 作成したディレクトリの中にこのリポジトリをクローンする。
-説明不要
+### 3. 導入したいプロジェクトに作成したmodulesを追加する。
+導入したいプロジェクトのpackage.jsonがある階層で以下のコマンドを実行。
+```shell script
+$ npm add -D <2で作成したtgzファイルまでの相対パス>
+```
+(例)
+```shell script
+$ npm add -D ../schematics-repo/schematics-repo-1.0.0.tgz
+```
+こうするとローカルのnpm modulesをdevDependenciesに追加しつつインストールできる。
 
 ### 4. プロジェクトの`package.json`に`schematics`項目を追加する。
+まずはSchematicsがどのcollection.jsonを参照するのかを指定する。
 ```json
 {
   "schematics": "./<2で作成したディレクトリ>/schematics-repo/src/collection.json"
 }
 ```
 
-### 5. プロジェクトのpackage.jsonの`scripts`項目に以下のコマンドを追加する。
+### 5. プロジェクトのpackage.jsonの`scripts`項目に実行コマンドを追加する。
+(例)
 ```json
 {
     "scripts": {
-      "schematics:build": "npx tsc -p <2で作成したディレクトリ>/schematics-repo",
-      "schematics:generate": "node <2で作成したディレクトリ>/schematics-repo/bin/schematics-cli.js"
+      "gen:ts-new": "schematics .:ts-new"
+    }
+}
+```
+構文としては
+```shell script
+{
+    "scripts": {
+      "gen:<適当なやつ>": "schematics .:<ここにcollection.jsonに追加したSchematicsを指定>"
     }
 }
 ```
 
-### 6. Buildコマンドを実行する。
-```shell script
-$ npm run schematics:build
-```
 これで導入部分は終了
-
