@@ -3,7 +3,7 @@
   "schematics": {
     "ts-new": {
       "description": "Create TS project",
-      "factory": "./ts-new",
+      "factory": "./ts-new/index#createTsProject",
       "schema": "./ts-new/schema.json"
     }
   }

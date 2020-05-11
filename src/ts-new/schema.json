@@ -1,23 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema",
   "id": "SchematicsTsNewClass",
-  "title": "",
+  "title": "Create TS Project",
   "type": "object",
-  "description": "",
-  "properties": {
-    "name": {
-      "type": "string",
-      "description": "",
-      "x-prompt": "Enter Project name"
-    },
-    "directory": {
-      "type": "string",
-      "description": ""
-    },
-    "packageManager": {
-      "type": "string",
-      "description": "",
-      "enum": ["npm", "yarn"]
-    }
-  }
+  "description": ""
 }
