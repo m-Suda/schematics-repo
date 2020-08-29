@@ -1,32 +1,21 @@
 module.exports = {
-    env: {
-        'browser': true,
-        'es6': true,
-        'node': true,
-    },
     extends: [
         'airbnb-base',
         'plugin:@typescript-eslint/recommended',
         'plugin:prettier/recommended',
         'prettier/@typescript-eslint',
     ],
-    plugins: ['@typescript-eslint', 'prettier'],
+    plugins: ['@typescript-eslint'],
     parser: '@typescript-eslint/parser',
-    globals: {
-        'Atomics': 'readonly',
-        'SharedArrayBuffer': 'readonly',
-    },
-    parserOptions: {
-        'ecmaVersion': 2018,
-        'sourceType': 'module',
-    },
     rules: {
-        // 戻り値の型指定が無い関数を許可する。(AngularのRoutingでModuleのimportの際にWarningが出てしまうため。)
+        // 戻り値の型指定が無い関数はを許可する。
         '@typescript-eslint/explicit-function-return-type': 'off',
         // 処理のないメソッドを許可する。
         '@typescript-eslint/no-empty-function': 'off',
-        // @ts-ignoreコメントの使用を許可する。
+        // @ts-ignoreコメントの使用を許可する
         '@typescript-eslint/ban-ts-ignore': 'off',
+        // @ts-ignoreを許可する
+        '@typescript-eslint/ban-ts-comment': 'off',
         // モジュール読み込みで、requireの使用を許可する。(jest.config.jsで必要であるため。)
         '@typescript-eslint/no-var-requires': 'off',
         // exportを許可する(default exportでないときのエラーを表示させない。)
