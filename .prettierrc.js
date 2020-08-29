@@ -1,5 +1,5 @@
 module.exports = {
-    trailingComma: "es5",
+    trailingComma: 'es5',
     // セミコロンを強制
     semi: true,
     // シングルクォートを強制
@@ -7,9 +7,9 @@ module.exports = {
     // スペースは4つを強制
     tabWidth: 4,
     // オブジェクトのkeyはシングルクォート有り無しどちらでも許可
-    quoteProps: "preserve",
+    quoteProps: 'preserve',
     // 行末の改行コードはLFにする。
-    endOfLine: "lf",
+    endOfLine: 'lf',
     // 1行の長さを100文字に制限する。
     printWidth: 100,
 };
