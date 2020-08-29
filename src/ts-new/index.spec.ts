@@ -7,8 +7,10 @@ const collectionPath = path.join(__dirname, '../collection.json');
 describe('use-case', () => {
     test('works', () => {
         const runner = new SchematicTestRunner('schematics', collectionPath);
-        const tree = runner.runSchematic('use-case', {}, Tree.empty());
+        const tree$ = runner.runSchematicAsync('ts-new', {}, Tree.empty());
 
-        expect(tree.files).toEqual([]);
+        tree$.subscribe((tree) => {
+            expect(tree.files).toEqual([]);
+        });
     });
 });

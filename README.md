@@ -35,11 +35,11 @@ $ npm pack
 ### 3. 導入したいプロジェクトに作成したmodulesを追加する。
 導入したいプロジェクトのpackage.jsonがある階層で以下のコマンドを実行。
 ```shell script
-$ npm add -D <2で作成したtgzファイルまでの相対パス>
+$ npm add --no-save <2で作成したtgzファイルまでの相対パス>
 ```
 (例)
 ```shell script
-$ npm add -D ../schematics-repo/schematics-repo-1.0.0.tgz
+$ npm add --no-save ../schematics-repo/schematics-repo-1.0.0.tgz
 ```
 こうするとローカルのnpm modulesをdevDependenciesに追加しつつインストールできる。
 
